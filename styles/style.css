@@ -1,0 +1,56 @@
+/*************************************
+Global Styles
+ *************************************/
+* {
+	box-sizing: border-box;
+	font-size: 0px;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+/*************************************
+Radial Background
+ *************************************/
+body {
+	background: radial-gradient(circle, #fff, #888, #000);
+	
+}
+
+/*************************************
+Container Styles
+ *************************************/
+.container {
+	opacity: 0.4;
+	height: 100vh;
+	display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+}
+
+/*************************************
+Time/Hex Div Styles
+ *************************************/
+#clock-box {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#display-time {
+	color: #fff;
+	font-size: 125px;
+	text-align: center;
+	letter-spacing: 8px;
+	text-shadow: 2px 2px #000;
+}
+
+/*************************************
+60 Second Timer Bar Style
+ *************************************/
+#timer-bar {
+	width: 600px;
+	height: 6px;
+	background-color: #fff;
+	margin: 0 auto;
+	transition: width .5s;
+	border-bottom: 2px solid #000;
+}

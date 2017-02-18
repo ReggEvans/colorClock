@@ -1,11 +1,9 @@
- 
 //***********************************
 //DOM Node Selectors
 //***********************************
 var displayTime = document.querySelector('#display-time')   // grab the p tag inside the #clock-box div
 var containerNode = document.querySelector('.container')    // grab the container class
 var timerBarNode = document.querySelector('#timer-bar')     // grab the #timer-bar div
-
 
 //***********************************
 //Set Interval Function
@@ -15,7 +13,6 @@ setInterval(function() {
     showTime()
     changeHexBG()
 }, 500)
-
 
 //***********************************
 //Counting Clock Function
@@ -40,10 +37,7 @@ function showTime() {
     var currentTime = hours + ':' + mins + ':' + sec
     //pushing the 'currentTime' into the displayTime node
     displayTime.innerHTML = currentTime
-    //returning currentTime so that I can use it again later
-    return currentTime
 }
-
 
 //***********************************
 //BG Hex Color Function
@@ -70,7 +64,6 @@ function changeHexBG() {
     return hexColor
 }
 
-
 //***********************************
 //Hover Event
 //***********************************
@@ -78,8 +71,8 @@ function hexHover() {
     displayTime.innerHTML = changeHexBG()
 }
 
-    displayTime.addEventListener('mouseenter', hexHover)
-
+displayTime.addEventListener('mouseenter', hexHover)
+// displayTime.addEventListener('mouseleave', hexHover)
 
 //***********************************
 //Timer Bar Function
