@@ -2,15 +2,16 @@
 //***********************************
 //DOM Node Selectors
 //***********************************
+var clockBoxNode = document.querySelector('#clock-box')     // grab the #clock-box div
 var displayTime = document.querySelector('#display-time')   // grab the p tag inside the #clock-box div
 var containerNode = document.querySelector('.container')    // grab the container class
 var timerBarNode = document.querySelector('#timer-bar')     // grab the #timer-bar div
-
+var showHexColor = false
 
 //***********************************
 //Set Interval Function
 //***********************************
-//interval function recalls the all functions every 1/2 second
+//interval function recalls all functions every 1/2 second
 setInterval(function() {
     showTime()
     changeHexBG()
@@ -27,6 +28,9 @@ function showTime() {
     var mins = newTime.getMinutes()
     var sec = newTime.getSeconds()
     //conditionals to add '0' to numbers < 10
+    if (hours>12) {
+        hours = hours - 12
+    }
     if (hours<10) {
         hours = "0" + hours
     }
@@ -39,7 +43,11 @@ function showTime() {
     //setting variable that stores the currentTime in a string
     var currentTime = hours + ':' + mins + ':' + sec
     //pushing the 'currentTime' into the displayTime node
-    displayTime.innerHTML = currentTime
+    if (showHexColor) {
+        displayTime.innerHTML = changeHexBG()
+    } else {
+        displayTime.innerHTML = currentTime
+    }
     //returning currentTime so that I can use it again later
     return currentTime
 }
@@ -74,11 +82,21 @@ function changeHexBG() {
 //***********************************
 //Hover Event
 //***********************************
-function hexHover() {
+function mouseenterBigClock() {
     displayTime.innerHTML = changeHexBG()
+    showHexColor = true
 }
 
-    displayTime.addEventListener('mouseenter', hexHover)
+function mouseleaveBigClock() {
+    displayTime.innerHTML = showTime()
+    showHexColor = false
+}
+
+function addEvents() {
+    displayTime.addEventListener('mouseenter', mouseenterBigClock)
+    displayTime.addEventListener('mouseleave', mouseleaveBigClock)
+}
+addEvents()
 
 
 //***********************************
