@@ -82,19 +82,19 @@ function changeHexBG() {
 //***********************************
 //Hover Event
 //***********************************
-function mouseenterBigClock() {
+function mouseOverClock() {
     displayTime.innerHTML = changeHexBG()
     showHexColor = true
 }
 
-function mouseleaveBigClock() {
+function mouseOffClock() {
     displayTime.innerHTML = showTime()
     showHexColor = false
 }
 
 function addEvents() {
-    displayTime.addEventListener('mouseenter', mouseenterBigClock)
-    displayTime.addEventListener('mouseleave', mouseleaveBigClock)
+    displayTime.addEventListener('mouseenter', mouseOverClock)
+    displayTime.addEventListener('mouseleave', mouseOffClock)
 }
 addEvents()
 
