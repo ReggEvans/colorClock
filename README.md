@@ -2,4 +2,15 @@
 
 **Iron Yard Class Assignment**
 
-This repo contains a web application with a digital clock in which the background color gradually changes every second. The results are hosted on github.io and can be accessed from the repo description.
+ColorClock is a project that contains a clock in which the hex color associated with the background color changes every second with the ticking of the clock.
+
+## Screenshot
+![ColorClock Screen Shot](/img/clock_img_4.png)
+
+## Installation
+> git clone https://github.com/ReggEvans/colorClock.git
+> npm install
+> open index.html
+
+## License
+This project is licensed under the MIT License.
