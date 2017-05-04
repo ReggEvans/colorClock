@@ -8,7 +8,7 @@ ColorClock is a project that contains a clock in which the hex color associated 
 ![ColorClock Screen Shot](/img/clock_img_4.png)
 
 ## Installation
-`git clone https://github.com/ReggEvans/colorClock.git*
+`git clone https://github.com/ReggEvans/colorClock.git*.
 open index.html`
 
 ## License
